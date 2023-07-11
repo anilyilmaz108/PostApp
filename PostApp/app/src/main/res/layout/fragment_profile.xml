@@ -14,10 +14,14 @@
 
 
         <RelativeLayout
+            android:id="@+id/relativeLayout3"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="top|center"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -76,8 +80,8 @@
                 android:layout_below="@id/constraint1"
                 android:layout_marginLeft="30dp"
                 android:layout_marginTop="-25dp"
-                android:layout_marginBottom="25dp"
                 android:layout_marginRight="30dp"
+                android:layout_marginBottom="25dp"
 
                 android:background="@drawable/background_item_layout"
                 android:elevation="4dp"
@@ -200,11 +204,27 @@
             </LinearLayout>
 
 
-
-
-
-
         </RelativeLayout>
+
+        <TextView
+            android:id="@+id/logout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/blue_fill__rounded_color"
+            android:fontFamily="@font/poppins_medium"
+            android:gravity="center"
+            android:paddingTop="14dp"
+            android:paddingBottom="14dp"
+            android:text="Logout"
+            android:textColor="#ffffff"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/relativeLayout3" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

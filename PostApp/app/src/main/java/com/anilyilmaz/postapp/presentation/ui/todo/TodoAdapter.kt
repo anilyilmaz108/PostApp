@@ -37,6 +37,7 @@ class TodoAdapter(private val todoList : ArrayList<Todo>)
     override fun onBindViewHolder(holder: RowHolder, position: Int) {
         val todo = todoList[position]
         holder.todoTextView.text = todo.title
+        holder.checkTodo.isChecked = todo.completed
 
         holder.todoCard.setOnClickListener {
             todo.completed != todo.completed

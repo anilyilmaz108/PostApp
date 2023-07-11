@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.Navigation
 import com.anilyilmaz.postapp.R
 import com.anilyilmaz.postapp.databinding.FragmentHomeBinding
 import com.anilyilmaz.postapp.databinding.FragmentProfileBinding
@@ -29,6 +30,9 @@ class ProfileFragment : Fragment() {
         binding.username.text = Data.username
         binding.phone.text = Data.phone
         binding.web.text = Data.website
+        binding.logout.setOnClickListener {
+            Navigation.findNavController(it).navigate(R.id.action_profileFragment_to_loginFragment)
+        }
 
         val view = binding.root
         return view
