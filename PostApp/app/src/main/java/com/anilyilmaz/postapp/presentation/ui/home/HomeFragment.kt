@@ -62,7 +62,7 @@ class HomeFragment : Fragment() {
         }
 
 
-
+        //Log.e("phone","${Data.phone}")
 
         val view = binding.root
         return view
