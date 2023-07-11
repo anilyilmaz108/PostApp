@@ -1,8 +1,8 @@
 package com.anilyilmaz.postapp.util
 
-import androidx.lifecycle.MutableLiveData
 import com.anilyilmaz.postapp.model.Post
-import com.anilyilmaz.postapp.presentation.ui.login.User
+import com.anilyilmaz.postapp.model.User
+import com.anilyilmaz.postapp.model.Todo
 
 class Data {
 
@@ -10,7 +10,7 @@ class Data {
         var postList = ArrayList<Post>()
         var validateUser = User(0,"","","","","")
         var userList = ArrayList<User>()
-
+        var todoList = ArrayList<Todo>()
         var id: Int = 0
         var name: String = ""
         var email: String = ""

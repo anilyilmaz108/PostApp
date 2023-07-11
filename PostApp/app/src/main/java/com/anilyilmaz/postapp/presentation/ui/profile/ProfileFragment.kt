@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import com.anilyilmaz.postapp.R
 import com.anilyilmaz.postapp.databinding.FragmentHomeBinding
 import com.anilyilmaz.postapp.databinding.FragmentProfileBinding
+import com.anilyilmaz.postapp.util.Data
 
 
 class ProfileFragment : Fragment() {
@@ -22,6 +23,12 @@ class ProfileFragment : Fragment() {
     ): View? {
         _binding = FragmentProfileBinding.inflate(inflater, container, false)
 
+        binding.textView.text = Data.name
+        binding.textView2.text = Data.username
+        binding.email.text = Data.email
+        binding.username.text = Data.username
+        binding.phone.text = Data.phone
+        binding.web.text = Data.website
 
         val view = binding.root
         return view
