@@ -76,12 +76,6 @@ class HomeAdapter(private val postList : ArrayList<Post>)
         holder.numberOfComments.text = commentSize.toString()
 
         holder.comments.setOnClickListener {
-            //val myParcelizedObjectArrayList = ArrayList<MyParcelisedObject>()
-            //val bundle = bundleOf("SOME_BUNDLE_KEY" to myParcelizedObjectArrayList)
-
-            //findNavController().navigate(R.id.action_fragmentA_to_fragmentB, bundle)
-            //val transfer = HomeFragmentDirections.actionHomeFragmentToCommentFragment(tempCommentList.toArray())
-            //Navigation.findNavController(it).navigate(HomeFragmentDirections.actionHomeFragmentToCommentFragment(),tempCommentList)
             Navigation.findNavController(it).navigate(R.id.action_homeFragment_to_commentFragment)
 
         }

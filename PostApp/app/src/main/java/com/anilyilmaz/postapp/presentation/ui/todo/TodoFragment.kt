@@ -13,14 +13,20 @@ import com.anilyilmaz.postapp.databinding.FragmentShareBinding
 import com.anilyilmaz.postapp.databinding.FragmentTodoBinding
 import com.anilyilmaz.postapp.presentation.ui.home.HomeAdapter
 import com.anilyilmaz.postapp.presentation.ui.home.HomeViewModel
+import com.anilyilmaz.postapp.presentation.ui.login.LoginViewModel
+import com.anilyilmaz.postapp.presentation.ui.share.ShareViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
-
+//@AndroidEntryPoint
 class TodoFragment : Fragment() {
     private var _binding: FragmentTodoBinding? = null
     private val binding get() = _binding!!
 
-    lateinit var todoAdapter : TodoAdapter
     private val viewmodel: TodoViewModel by viewModels()
+
+
+    lateinit var todoAdapter : TodoAdapter
+    //val viewmodel: TodoViewModel by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -28,7 +34,6 @@ class TodoFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         _binding = FragmentTodoBinding.inflate(inflater, container, false)
-
         binding.todoToolbar.title = "To-Do"
 
 
@@ -48,6 +53,7 @@ class TodoFragment : Fragment() {
         val view = binding.root
         return view
     }
+
 
     override fun onDestroyView() {
         super.onDestroyView()

@@ -10,15 +10,18 @@ import com.anilyilmaz.postapp.R
 
 import com.anilyilmaz.postapp.databinding.FragmentShareBinding
 import com.anilyilmaz.postapp.presentation.ui.home.HomeViewModel
+import com.anilyilmaz.postapp.presentation.ui.login.LoginViewModel
 import com.anilyilmaz.postapp.util.Data
 import com.google.android.material.snackbar.Snackbar
+import dagger.hilt.android.AndroidEntryPoint
 
+//@AndroidEntryPoint
 class ShareFragment : Fragment() {
 
     private var _binding: FragmentShareBinding? = null
     private val binding get() = _binding!!
-
     private val viewmodel: ShareViewModel by viewModels()
+    //val viewmodel: ShareViewModel by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -45,9 +48,12 @@ class ShareFragment : Fragment() {
         return view
     }
 
+
+
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
     }
+
 
 }

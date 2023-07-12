@@ -4,18 +4,24 @@ import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+//import com.anilyilmaz.postapp.di.MainRepository
 import com.anilyilmaz.postapp.model.Comment
 import com.anilyilmaz.postapp.model.Post
 import com.anilyilmaz.postapp.model.User
 import com.anilyilmaz.postapp.util.ApiUtils
 import com.anilyilmaz.postapp.util.Data
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.CoroutineExceptionHandler
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
+import javax.inject.Inject
 
+
+//@HiltViewModel
+//@Inject constructor(private val mainRepository: MainRepository)
 class HomeViewModel : ViewModel() {
     val exceptionHandler = CoroutineExceptionHandler { coroutineContext, throwable ->
         println("Error: ${throwable.localizedMessage}")
@@ -63,9 +69,6 @@ class HomeViewModel : ViewModel() {
                     response.body()?.let {
                         Data.userAllList = ArrayList(it)
                         userList.value = Data.userAllList
-                        //postList.postValue(response.body())
-                        //Log.e("Title","${postList.value?.get(0)?.title}")
-                        Log.e("userAllSize","==> ${Data.userAllList.size}")
                         loading.value = false
 
                     }
@@ -88,9 +91,6 @@ class HomeViewModel : ViewModel() {
                     response.body()?.let {
                         Data.userAllComment = ArrayList(it)
                         commentList.value = Data.userAllComment
-                        //postList.postValue(response.body())
-                        //Log.e("Title","${postList.value?.get(0)?.title}")
-                        Log.e("commentAllSize","==> ${Data.userAllComment.size}")
                         loading.value = false
 
                     }
