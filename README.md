@@ -101,22 +101,6 @@ Build -> Generate Signed Bundle / APK -> Next(choose anyone) -> Create new... ->
 
 If you have any feedback, please contact us at anilyilmaz108@gmail.com.
 
-  
-## Technologies
 
-<div align="left">
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg" height="40" alt="kotlin logo"  />
-</div>
-
----
-- Clean Architecture
-- MVVM architecture
-- Navigation Component
-- Retrofit
-- Coroutines
-- View Binding
-- Shimmer Animation
-- Dependency Injection - Hilt
----
 
 
